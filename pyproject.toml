@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pupildeconvolve"
+version = "1.0"
+description = "Dual-kernel pupil deconvolution for attentional pulse estimation"
+authors = [
+    {name = "Sangramjit Maity"}
+]
+readme = "README.md"
+requires-python = ">=3.9"
+
+dependencies = [
+    "numpy",
+    "pandas",
+    "scipy",
+    "matplotlib",
+    "tqdm"
+]

@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+pupildeconvolve/__init__.py
+pupildeconvolve/core.py
+pupildeconvolve/dataframe.py
+pupildeconvolve/kernels.py
+pupildeconvolve/optimization.py
+pupildeconvolve/plotting.py
+pupildeconvolve/utils.py
+pupildeconvolve.egg-info/PKG-INFO
+pupildeconvolve.egg-info/SOURCES.txt
+pupildeconvolve.egg-info/dependency_links.txt
+pupildeconvolve.egg-info/requires.txt
+pupildeconvolve.egg-info/top_level.txt
+tests/test_api.py
+tests/test_core.py
+tests/test_inputs.py
