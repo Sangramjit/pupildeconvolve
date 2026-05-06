@@ -48,7 +48,7 @@ The package is designed primarily for:
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/pupildeconvolve.git
+git clone https://github.com/Sangramjit/pupildeconvolve
 ```
 
 Move into the repository:
