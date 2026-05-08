@@ -1,8 +1,14 @@
 # pupildeconvolve
 
-Dual-kernel pupil deconvolution for estimating attentional pulse dynamics from pupil-size recordings.
+<div align="center">
 
----
+<img src="Assets/PupilDeconvolve.png"/>
+
+### Dual-kernel pupil deconvolution for estimating attentional pulse dynamics from pupil-size recordings.
+
+</div>
+
+<br>
 
 # Overview
 
@@ -19,7 +25,6 @@ The package is designed primarily for:
 
 * cognitive neuroscience
 * attention research
-* emotional face processing
 * attentional blink experiments
 * Faced Paced Stimuli Presenttaion like RSVP, Video
 * pupillometry experiments
@@ -29,9 +34,7 @@ The package is designed primarily for:
 # Key Features
 
 * Dual-kernel pupil modeling
-* Participant-wise averaging before fitting
 * Attention pulse estimation
-* PLR (pupillary light reflex) modeling
 * Drift/slope estimation
 * Confidence interval plotting
 * Multi-participant support
@@ -48,7 +51,7 @@ The package is designed primarily for:
 Clone the repository:
 
 ```bash
-git clone https://github.com/Sangramjit/pupildeconvolve
+git clone https://github.com/YOUR_USERNAME/pupildeconvolve.git
 ```
 
 Move into the repository:
@@ -63,13 +66,6 @@ Install locally:
 pip install -e .
 ```
 
-The `-e` flag installs the package in editable mode.
-
-This means:
-
-* changes in source files update immediately
-* no reinstall required after edits
-* useful during development
 
 ---
 
@@ -96,7 +92,7 @@ Trials
 → Participant average
 → Dual-kernel fitting
 → Attention pulse estimation
-→ Group statistics/plotting
+→ Group plotting
 ```
 
 The package intentionally performs:
@@ -117,8 +113,7 @@ because participant-level averaging produces:
 
 * more stable fits
 * reduced noise
-* biologically plausible pulse profiles
-* better late-pulse estimation
+
 
 ---
 
@@ -271,9 +266,6 @@ fit_dataframe(
 ### df
 
 Pandas DataFrame containing trial-wise pupil recordings.
-
----
-
 ### pupil_cols
 
 List of columns containing pupil timepoints.
@@ -283,9 +275,6 @@ Example:
 ```python
 pupil_cols = list(range(243))
 ```
-
----
-
 ### participant_col
 
 Column containing participant IDs.
@@ -295,9 +284,6 @@ Example:
 ```python
 participant_col="participant"
 ```
-
----
-
 ### condition_col
 
 Optional condition column.
@@ -313,8 +299,6 @@ If provided:
 * fitting occurs separately for each condition
 * output contains one row per participant × condition
 
----
-
 ### sampling_rate
 
 Sampling rate in Hz.
@@ -324,9 +308,6 @@ Example:
 ```python
 sampling_rate=100
 ```
-
----
-
 ### pulse_interval
 
 Spacing between attentional pulses in milliseconds.
@@ -336,9 +317,6 @@ Example:
 ```python
 pulse_interval=150
 ```
-
----
-
 ### pulse_times
 
 Optional custom pulse times.
@@ -353,8 +331,6 @@ If omitted:
 
 regular pulse spacing is generated automatically.
 
----
-
 ### n_runs
 
 Number of optimization restarts.
@@ -368,9 +344,8 @@ Recommended:
 
 | Dataset size        | Recommended n_runs |
 | ------------------- | ------------------ |
-| small               | 5–10               |
-| medium              | 10–25              |
-| publication-quality | 25–50              |
+| small               | 30-50              |
+| publication-quality | 50-100             |
 
 ---
 
@@ -382,19 +357,13 @@ The model contains:
 
 Models early constriction dynamics.
 
----
-
 ## 2. Attention kernel
 
 Models slower attentional recruitment.
 
----
-
 ## 3. Drift/slope term
 
 Models slow pupil drift.
-
----
 
 # Optimization
 
@@ -522,7 +491,7 @@ The repository contains:
 | File                    | Description               |
 | ----------------------- | ------------------------- |
 | examples/basic_usage.py | synthetic dataset example |
-| examples/dm_example.py  | DataMatrix workflow       |
+| examples/test_run.py    |DataMatrix Workflow        |
 | tests/test_api.py       | API tests                 |
 
 ---
@@ -558,12 +527,14 @@ Typical outputs include:
 
 If you use this package in research, please cite:
 
-```text
-Maity, S. (2026).
-pupildeconvolve: Dual-kernel pupil deconvolution for attentional pulse estimation.
-```
+@software{maity2026pupildeconvolve,
+  author = {Sangramjit Maity},
+  title = {pupildeconvolve},
+  year = {2026}
+}
 
 ---
+![Attentional Pulse Example](docs/example_images/attentional_pupil_data.png)
 
 # License
 
